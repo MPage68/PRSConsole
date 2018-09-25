@@ -1,32 +1,22 @@
 package prs.business;
 
 public class Product {
-	private int ID;
+	private int id;
 	private int vendorID;
 	private String partNumber;
-	private String Name;
-	private double Price;
+	private String name;
+	private double price;
 	private String unit;
 	private String photoPath;
-	private boolean isActive;
+
 	
-	public Product(int iD, int vendorID, String partNumber, String name, double price, String unit, String photoPath,
-			boolean isActive) {
-		super();
-		ID = iD;
-		this.vendorID = vendorID;
-		this.partNumber = partNumber;
-		Name = name;
-		Price = price;
-		this.unit = unit;
-		this.photoPath = photoPath;
-		this.isActive = isActive;
-	}
+	public Product() {}
+	
 	public int getID() {
-		return ID;
+		return id;
 	}
-	public void setID(int iD) {
-		ID = iD;
+	public void setID(int id) {
+		this.id = id;
 	}
 	public int getVendorID() {
 		return vendorID;
@@ -41,16 +31,16 @@ public class Product {
 		this.partNumber = partNumber;
 	}
 	public String getName() {
-		return Name;
+		return name;
 	}
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
 	public double getPrice() {
-		return Price;
+		return price;
 	}
 	public void setPrice(double price) {
-		Price = price;
+		this.price = price;
 	}
 	public String getUnit() {
 		return unit;
@@ -64,16 +54,11 @@ public class Product {
 	public void setPhotoPath(String photoPath) {
 		this.photoPath = photoPath;
 	}
-	public boolean getIsActive() {
-		return isActive;
-	}
-	public void setIsActive(boolean isActive) {
-		this.isActive = isActive;
-	}
+
 	@Override
 	public String toString() {
-		return "Product [ID=" + ID + ", vendorID=" + vendorID + ", partNumber=" + partNumber + ", Name=" + Name
-				+ ", Price=" + Price + ", unit=" + unit + ", photoPath=" + photoPath + ", isActive=" + isActive + "]";
+		return "Product [ID=" + id + ", vendorID=" + vendorID + ", partNumber=" + partNumber + ", Name=" + name
+				+ ", Price=" + price + ", unit=" + unit + ", photoPath=" + photoPath + ", isActive=" + "]";
 	}
 
 }
