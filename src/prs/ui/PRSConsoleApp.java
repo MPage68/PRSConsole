@@ -20,22 +20,26 @@ public class PRSConsoleApp {
 			if (command.equals("1")) {
 				List<Product> products = pdb.getAll();
 
-				for (Product p : products) {
-					System.out.println(p);
-				}
-
-			} else if (command.equals("2")) {
-				List<Product> products;
-				int id = Console.getInt("Search products by ID: ");
-				products = new ArrayList<>();
-
-				products = pdb.get(id);
-
 				for (Product product : products) {
 					printReportDetail(product);
 				}
 
+			} else if (command.equals("2")) {
+				displayProductID(pdb);
+
 			}
+		}
+	}
+
+	public static void displayProductID(ProductDB pdb) {
+		List<Product> products;
+		int id = Console.getInt("Search products by ID: ");
+		products = new ArrayList<>();
+
+		products = pdb.get(id);
+
+		for (Product product : products) {
+			printReportDetail(product);
 		}
 	}
 
